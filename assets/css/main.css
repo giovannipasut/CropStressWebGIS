@@ -2705,16 +2705,22 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		background-attachment: scroll,							scroll,					fixed;
-		background-image: url("images/top-3200.svg"), url("images/overlay.png"), url("../../images/header.jpg");
-		background-position: bottom center,					top left,				center center;
-		background-repeat: repeat-x,						repeat,					no-repeat;
-		background-size: 3200px 460px,					auto,					cover;
-		color: rgba(255, 255, 255, 0.8);
+		background-attachment: scroll, scroll, fixed;
+		background-image: url("images/top-1600.svg"), linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url("../../images/field.png");
+		background-position: bottom center, center center, center center;
+		background-repeat: repeat-x, no-repeat, no-repeat;
+		background-size: 3200px 460px, auto, cover;
+
+
+		color: rgba(255, 255, 255, 0.9);
 		padding: 10em 0 20em 0;
 		position: relative;
 		text-align: center;
 	}
+	.header-content {
+    margin-top: 2em;
+}
+
 
 		#header:before, #header:after {
 			background: rgba(224, 224, 224, 0.75);
@@ -2765,15 +2771,16 @@ input, select, textarea {
 		#header .logo {
 			background: #4eb980;
 			border-radius: 100%;
-			color: #ffffff;
-			cursor: default;
-			display: inline-block;
-			font-size: 2.25em;
-			height: 2.35em;
-			line-height: 2.35em;
-			margin: 0 0 0.75em 0;
-			text-align: center;
-			width: 2.35em;
+			width: 4.5em;
+			height: 4.5em;
+			display: inline-flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 auto 1.5em auto;
+		}
+		#header .logo img {
+			width: 50px;
+			height: 50px;
 		}
 
 			#header .logo.fa-paper-plane-o:before {
@@ -3022,7 +3029,8 @@ input, select, textarea {
 
 			#header {
 				background-attachment: scroll,							scroll,							scroll;
-				background-image: url("images/top-1600.svg"), url("images/overlay.png"), url("../../images/header.jpg");
+				background-image: url("images/top-1600.svg"), linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url("../../images/field.png");
+				background-position: center calc(100% + 40px),center center,center center;
 				background-size: 1600px 230px,					auto,							cover;
 				padding: 6em 0 12em 0;
 			}
@@ -3174,7 +3182,8 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				background-image: url("images/top-1280.svg"), url("images/overlay.png"), url("../../images/header.jpg");
+				background-image: url("images/top-1280.svg"), linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url("../../images/field.png");
+				background-position: center calc(100% + 30px), center center,center center;
 				background-size: 1280px 184px,						auto,							cover;
 				padding: 3em 0 7em 0;
 			}
