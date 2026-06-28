@@ -1,72 +1,254 @@
-/* ===========================
-   PAGE HEADER
-=========================== */
+/* =====================================================
+   GENERAL
+===================================================== */
 
-.page-banner{
-    width:100%;
-    height:70px;
-
-    background-image:url("../../images/field.png");
-    background-size:cover;
-    background-position:center 70%;
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #ffffff;
+    color: #555;
 }
 
-.page-header{
-
-    text-align:center;
-
-    padding:70px 30px 50px;
-
-    background:white;
+.page-content {
+    width: min(1300px, 92%);
+    margin: 0 auto;
 }
 
-.page-header h1{
+.section-divider{
+    width: 75%;
+    max-width: 1100px;
+    height: 1px;
+    margin: 70px auto;
 
-    font-size:3rem;
-
-    font-weight:800;
-
-    letter-spacing:0.15em;
-
-    color:#222;
-
-    margin-bottom:18px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        #dcdcdc 15%,
+        #dcdcdc 85%,
+        transparent
+    );
 }
 
-.page-header p{
+/* =====================================================
+   TOP & BOTTOM BANNER
+===================================================== */
 
-    max-width:700px;
+.page-banner {
+    width: 100%;
+    height: 120px;
 
-    margin:auto;
+    background-image: url("../../images/field.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 72%;
 
-    color:#666;
+    margin: 0 auto;
+}
 
-    font-size:1.15rem;
-
-    line-height:1.7;
+.page-footer {
+    transform: rotate(180deg);
 }
 
 
-/* ===========================
-   MAIN CONTENT
-=========================== */
+/* =====================================================
+   PAGE TITLE
+===================================================== */
 
-.page-content{
+.page-header-content {
 
-    width:90%;
+    text-align: center;
 
-    max-width:1200px;
-
-    margin:0 auto;
-
-    padding:60px 0;
+    padding: 60px 0 30px 0;
 }
 
-.page-footer-banner{
-    width:100%;
-    height:70px;
+.page-header-content h1 {
 
-    background-image:url("../../images/field.png");
-    background-size:cover;
-    background-position:center 70%;
+    font-size: 3rem;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+
+    color: #333;
+
+    margin-bottom: .35em;
+}
+
+.page-header-content p {
+
+    font-size: 1.25rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .08em;
+
+    color: #777;
+}
+
+
+/* =====================================================
+   CONTENT SECTIONS
+===================================================== */
+
+.page-section {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 70px;
+
+    margin: 90px 0;
+}
+
+.page-section.reverse {
+
+    flex-direction: row-reverse;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.page-image {
+
+    flex: 1;
+}
+
+.page-image img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 6px;
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.page-text {
+
+    flex: 1;
+}
+
+.page-text h2 {
+
+    font-size: 2rem;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+
+    color: #444;
+
+    margin-bottom: 25px;
+}
+
+.page-text p {
+
+    font-size: 1.15rem;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   FINAL SECTION
+===================================================== */
+
+.page-end {
+
+    text-align: center;
+
+    max-width: 900px;
+
+    margin: 120px auto;
+}
+
+.page-end h2 {
+
+    font-size: 2.2rem;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+
+    color: #333;
+
+    margin-bottom: 25px;
+}
+
+.page-end p {
+
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.page-button {
+
+    display: inline-block;
+
+    padding: 18px 42px;
+
+    background: #55505a;
+
+    color: white;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    letter-spacing: .12em;
+
+    border-radius: 5px;
+
+    transition: .25s;
+}
+
+.page-button:hover {
+
+    background: #4eb980;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .page-section,
+    .page-section.reverse {
+
+        flex-direction: column;
+    }
+
+    .page-header-content h1 {
+
+        font-size: 2.3rem;
+    }
+
+    .page-text {
+
+        text-align: center;
+    }
+
 }
