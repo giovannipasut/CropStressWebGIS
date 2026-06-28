@@ -2946,7 +2946,7 @@ input[type="button"].small,
 				and a negative margin (to move everything up a bit).
 			*/
 
-	margin-top: -260px;
+	margin-top: 4em;
 	padding: calc(460px + 6em) 0 10em 0;
 	position: relative;
 	text-align: center;
@@ -3051,7 +3051,7 @@ input[type="button"].small,
 /* Main */
 
 #main {
-	padding: 6em 0 5em 0;
+	padding: 6em 0 0 0;
 	position: relative;
 	z-index: 1;
 }
@@ -3201,8 +3201,8 @@ input[type="button"].small,
 	#footer {
 		background-image: url("images/bottom-1600.svg");
 		background-size: 1600px 230px;
-		margin-top: -100px;
-		padding: calc(230px + 4em) 0 6em 0;
+		margin-top: -120px;
+		padding: 8em 0 6em 0;
 	}
 
 	#footer:before {
@@ -3362,8 +3362,8 @@ input[type="button"].small,
 	#footer {
 		background-image: url("images/bottom-1280.svg");
 		background-size: 1280px 184px;
-		margin-top: -75px;
-		padding: calc(184px + 2em) 0 2em 0;
+		margin-top: -120px;
+		padding: 8em 0 6em 0;
 	}
 
 	#footer:before {
@@ -3434,7 +3434,7 @@ input[type="button"].small,
 	/* Footer */
 
 	#footer {
-		margin-top: -100px;
+		margin-top: -120px;
 		padding-left: 1em;
 		padding-right: 1em;
 	}

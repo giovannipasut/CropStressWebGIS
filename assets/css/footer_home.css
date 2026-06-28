@@ -1,0 +1,171 @@
+/* =====================================================
+   HOME CTA
+===================================================== */
+
+.home-cta {
+
+    background: #ffffff;
+
+    text-align: center;
+
+    padding: 5em 1.5em 5em;
+}
+
+.home-cta h2 {
+
+    font-size: 2.1em;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+
+    color: #444;
+
+    margin-bottom: 1em;
+}
+
+.home-cta p {
+
+    max-width: 760px;
+
+    margin: 0 auto 2.5em;
+
+    font-size: 1.15em;
+
+    line-height: 1.8;
+
+    color: #666;
+}
+
+.cta-button {
+
+    display: inline-block;
+
+    background: #55505a;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    letter-spacing: .18em;
+
+    font-weight: 700;
+
+    padding: 1.1em 3.3em;
+
+    border-radius: 7px;
+
+    transition: .25s;
+}
+
+.cta-button:hover {
+
+    background: #4eb980;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.home-footer {
+
+    background: #4eb980;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    padding: 4em 2em;
+}
+
+.home-footer .container {
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.footer-description {
+
+    font-size: 1.05em;
+
+    line-height: 1.9;
+
+    opacity: .95;
+
+    margin-bottom: 3em;
+}
+
+.footer-bottom {
+
+    border-top: 1px solid rgba(255, 255, 255, .35);
+
+    padding-top: 2em;
+
+    font-size: .9em;
+
+    letter-spacing: .06em;
+
+    opacity: .9;
+}
+
+.footer-bottom span {
+
+    margin: 0 1.2em;
+
+    opacity: .6;
+}
+.home-footer::after{
+
+    content:"";
+
+    display:block;
+    
+
+    height:220px;
+
+    margin:4em -2em -4em;
+
+    background:url("../../images/field.png") center bottom/cover no-repeat;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:768px) {
+
+    .home-cta {
+
+        padding: 4em 1.5em;
+    }
+
+    .home-cta h2 {
+
+        font-size: 1.6em;
+    }
+
+    .home-cta p {
+
+        font-size: 1em;
+    }
+
+    .footer-bottom span {
+
+        display: none;
+    }
+
+    .footer-bottom {
+
+        line-height: 2;
+    }
+
+}
+.home-footer{
+    margin-top:-48px;
+}
