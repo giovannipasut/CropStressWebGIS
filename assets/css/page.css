@@ -76,9 +76,11 @@ body {
 
 .page-header-content p {
 
-    font-size: 1.25rem;
+    max-width: 900px;
 
-    text-transform: uppercase;
+    margin: 0 auto; 
+    
+    font-size: 1.25rem;
 
     letter-spacing: .08em;
 

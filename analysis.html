@@ -18,156 +18,109 @@
 	<!-- Title -->
 	<header class="page-header-content">
 
-		<h1>DATA COLLECTION</h1>
+		<h1>STRESS ANALYSIS</h1>
 
 		<p>
-			UAV surveys, multispectral and thermal imagery,
-			and field observations.
+			The crop stress maps available in this WebGIS are generated through a multi-step processing workflow that
+			transforms raw UAV imagery into spatially aggregated stress indicators.
+			The objective is to provide reliable and comparable information about crop health throughout the growing
+			season.
 		</p>
 
 	</header>
-<div class="section-divider"></div>
+	<div class="section-divider"></div>
 	<main class="page-content">
 
-		<!-- Study Area -->
+		<!-- Vegetation Indices -->
 		<section class="page-section">
 
 			<div class="page-image">
-				<img src="images/data_collection_images/flight.png" alt="Study Area">
+				<img src="images/stress_analysis_images/vegetation_indices.png" alt="Vegetation Indices">
 			</div>
 
 			<div class="page-text">
 
-				<h2>Study Area</h2>
+				<h2>Vegetation Indices</h2>
 
 				<p>
-					The study was carried out on an experimental wheat field.
-					Before each survey, the Area of Interest (AOI) was defined
-					and flight permissions and environmental conditions were checked.
+					Vegetation indices are derived from both UAV multispectral imagery and Sentinel-2 satellite
+					observations to provide complementary information on crop conditions.
+					The UAV imagery captures fine scale spatial variability at centimetre level resolution, allowing the
+					identification of localized differences within the field. Sentinel-2 imagery complements this
+					analysis by providing regular observations throughout the growing season, enabling the assessment of
+					overall field conditions and temporal trends.
+					Together, these datasets support both detailed local analysis and continuous large-scale crop
+					monitoring.
 				</p>
 
 			</div>
 
 		</section>
 		<div class="section-divider"></div>
-		<!-- UAV Platform -->
+		<!-- Grid Aggregation -->
 		<section class="page-section reverse">
 
 			<div class="page-image">
-				<img src="images/data_collection_images/drone_plan.png" alt="UAV Platform">
+				<img src="images/stress_analysis_images/grid_aggregation.png" alt="Grid Aggregation">
 			</div>
 
 			<div class="page-text">
 
-				<h2>UAV Platform</h2>
+				<h2>Grid Aggregation</h2>
 
 				<p>
-					Data were collected using a UAV equipped with multispectral
-					and thermal sensors. Flight altitude, overlap and speed were
-					optimized to guarantee complete field coverage.
+					Instead of analysing millions of individual UAV pixels, the field is divided into regular grid cells
+					and,
+
+					for each cell, the average value of all vegetation indices and canopy temperature is calculated.
+
+					The 1.5 × 1.5 m grid represents a compromise between spatial detail and computational efficiency. It
+					reduces the noise associated with very high-resolution UAV imagery while preserving the within-field
+					spatial variability required for crop monitoring
 				</p>
 
 			</div>
 
 		</section>
-<div class="section-divider"></div>
-		<!-- Multispectral -->
+		<div class="section-divider"></div>
+		<!-- Stress Assessment -->
 		<section class="page-section">
 
 			<div class="page-image">
-				<img src="images/data_collection_images/multispectral.gif" alt="Multispectral">
-
+				<img src="images/stress_analysis_images/stress_assessment.png" alt="Stress Assessment">
 			</div>
 
 			<div class="page-text">
 
-				<h2>Multispectral Acquisition</h2>
+				<h2>Stress Assessment</h2>
 
 				<p>
-					Five spectral bands were acquired simultaneously to describe
-					crop reflectance and vegetation status under different wavelengths.
+					Crop stress is evaluated by combining vegetation indices and canopy temperature using
+
+					percentile-based thresholds calculated for each survey.
+					Each grid cell receives a final Stress Score ranging from healthy to highly stressed conditions.
+					The resulting stress map provides an intuitive overview of crop variability and allows users to
+					monitor changes throughout the growing season.
 				</p>
 
 			</div>
 
 		</section>
-<div class="section-divider"></div>
-		<!-- Thermal -->
-		<section class="page-section reverse">
+		<div class="section-divider"></div>
 
-			<div class="page-image">
-				<img src="images/data_collection_images/thermal.png" alt="Thermal Survey">
-			</div>
-
-			<div class="page-text">
-
-				<h2>Thermal Survey</h2>
-
-				<p>
-					Thermal imagery was collected during the same flight to identify
-					canopy temperature variations related to water stress.
-				</p>
-
-			</div>
-
-		</section>
-<div class="section-divider"></div>
-		<!-- Ground -->
-		<section class="page-section">
-
-			<div class="page-image">
-				<img src="images/data_collection_images/gcp.png" alt="Ground Measurements">
-			</div>
-
-			<div class="page-text">
-
-				<h2>Ground Measurements</h2>
-
-				<p>
-					Field observations and reference measurements were collected
-					to validate remotely sensed information and support the
-					interpretation of crop stress.
-				</p>
-
-			</div>
-
-		</section>
-<div class="section-divider"></div>
-		<!-- Dataset -->
-		<section class="page-section reverse">
-
-			<div class="page-image">
-				<img src="images/data_collection_images/workflow.png" alt="Dataset">
-			</div>
-
-			<div class="page-text">
-
-				<h2>Collected Dataset</h2>
-
-				<p>
-					The final dataset includes RGB, multispectral and thermal
-					imagery together with field observations that are processed
-					during the analysis phase.
-				</p>
-
-			</div>
-
-		</section>
-<div class="section-divider"></div>
 	</main>
 
 	<section class="page-end">
 
-		<h2>Ready for Analysis?</h2>
+		<h2>More information about the indices or stress assessment?</h2>
 
 		<p>
-			Once all UAV imagery has been collected and validated, the datasets
-			are processed to derive vegetation indices, thermal anomalies and crop
-			stress indicators.
+			Each vegetation index provides different information about crop condition. Explore their meaning and
+			discover how they help monitor plant health and detect stress. 
 		</p>
 
 		<a href="analysis.html" class="page-button">
-			Continue to Data Analysis
+			Continue to Field Indices
 		</a>
 
 	</section>
