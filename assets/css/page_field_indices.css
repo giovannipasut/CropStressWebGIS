@@ -366,3 +366,93 @@ body {
 
     line-height: 1.9;
 }
+
+/* =====================================================
+   VEGETATION INDICES
+===================================================== */
+
+.indices-section{
+
+    margin:80px 0;
+}
+
+.indices-table{
+
+    width:100%;
+
+    margin:4rem auto;
+}
+
+.indices-table table{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+.indices-table th{
+
+    background:#4eb980;
+
+    color:#fff;
+
+    text-align:left;
+
+    padding:16px 20px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.08em;
+}
+
+.indices-table td{
+
+    padding:18px 20px;
+
+    border-bottom:1px solid #e8e8e8;
+
+    vertical-align:middle;
+}
+
+.indices-table tbody tr:nth-child(even){
+
+    background:#fafafa;
+}
+
+.indices-table strong{
+
+    display:block;
+
+    font-size:1.05rem;
+
+    color:#333;
+
+    margin-bottom:4px;
+}
+
+.indices-table span{
+
+    display:block;
+
+    font-size:.86rem;
+
+    color:#888;
+
+    line-height:1.4;
+}
+
+.indices-description{
+
+    max-width:900px;
+
+    margin:4rem auto 0;
+
+    text-align:center;
+}
+
+.indices-description p{
+
+    font-size:1.1rem;
+
+    line-height:1.9;
+}

@@ -132,89 +132,188 @@
 
 		<div class="section-divider"></div>
 
-		<!-- UAV Platform -->
-		<section class="page-section reverse">
+		<!-- VEGETATION INDICES -->
+		
+		<section class="indices-section">
 
-			<div class="page-image">
-				<img src="images/data_collection_images/drone_plan.png" alt="UAV Platform">
+			<div class="page-text">
+
+				<h2>VEGETATION INDICES</h2>
+
+				<p>
+					Vegetation indices combine different spectral bands to quantify
+					crop vigor, chlorophyll concentration, moisture content and thermal
+					conditions. Each indicator highlights a specific aspect of plant
+					physiology and contributes to a comprehensive evaluation of crop health.
+				</p>
+
+			</div>
+
+			<div class="indices-table">
+
+				<table>
+
+					<thead>
+
+						<tr>
+
+							<th>Index</th>
+							<th>Formula</th>
+							<th>Typical Range</th>
+							<th>Main Application</th>
+							<th>Healthy Value</th>
+
+						</tr>
+
+					</thead>
+
+					<tbody>
+
+						<tr>
+
+							<td>
+
+								<strong>NDVI</strong>
+
+								<span>Normalized Difference Vegetation Index</span>
+
+							</td>
+
+							<td>(NIR − Red) / (NIR + Red)</td>
+
+							<td>-1 to 1</td>
+
+							<td>General crop vigor</td>
+
+							<td>High (≈ 0.6 – 0.9)</td>
+
+						</tr>
+
+						<tr>
+
+							<td>
+
+								<strong>GNDVI</strong>
+
+								<span>Green Normalized Difference Vegetation Index</span>
+
+							</td>
+
+							<td>(NIR − Green) / (NIR + Green)</td>
+
+							<td>-1 to 1</td>
+
+							<td>Chlorophyll & nitrogen status</td>
+
+							<td>High (≈ 0.5 – 0.8)</td>
+
+						</tr>
+
+						<tr>
+
+							<td>
+
+								<strong>NDRE</strong>
+
+								<span>Normalized Difference Red Edge Index</span>
+
+							</td>
+
+							<td>(NIR − Red Edge) / (NIR + Red Edge)</td>
+
+							<td>-1 to 1</td>
+
+							<td>Mature canopy monitoring</td>
+
+							<td>High (≈ 0.3 – 0.6)</td>
+
+						</tr>
+
+						<tr>
+
+							<td>
+
+								<strong>NDMI</strong>
+
+								<span>Normalized Difference Moisture Index</span>
+
+							</td>
+
+							<td>(NIR − SWIR) / (NIR + SWIR)</td>
+
+							<td>-1 to 1</td>
+
+							<td>Vegetation water content</td>
+
+							<td>High (≈ 0.2 – 0.6)</td>
+
+						</tr>
+
+						<tr>
+
+							<td>
+
+								<strong>MSI</strong>
+
+								<span>Moisture Stress Index</span>
+
+							</td>
+
+							<td>SWIR / NIR</td>
+
+							<td>> 0</td>
+
+							<td>Moisture stress detection</td>
+
+							<td>Low (&lt; 1)</td>
+
+						</tr>
+
+						<tr>
+
+							<td>
+
+								<strong>Canopy Temperature</strong>
+
+								<span>Thermal Infrared Measurement</span>
+
+							</td>
+
+							<td>Thermal Camera (°C)</td>
+
+							<td>Variable</td>
+
+							<td>Thermal crop monitoring</td>
+
+							<td>Low (Cool canopy)</td>
+
+						</tr>
+
+					</tbody>
+
+				</table>
+
 			</div>
 
 			<div class="page-text">
 
-				<h2>UAV Platform</h2>
-
 				<p>
-					Data were collected using a UAV equipped with multispectral
-					and thermal sensors. Flight altitude, overlap and speed were
-					optimized to guarantee complete field coverage.
+
+					Since no individual indicator fully describes crop conditions,
+					vegetation indices are interpreted together with canopy temperature.
+					Their complementary information enables a more reliable evaluation
+					of crop health than any single variable alone.
+
 				</p>
 
 			</div>
 
 		</section>
+
+
 		<div class="section-divider"></div>
-		<!-- Multispectral -->
-		<section class="page-section">
 
-			<div class="page-image">
-				<img src="images/data_collection_images/multispectral.gif" alt="Multispectral">
-
-			</div>
-
-			<div class="page-text">
-
-				<h2>Multispectral Acquisition</h2>
-
-				<p>
-					Five spectral bands were acquired simultaneously to describe
-					crop reflectance and vegetation status under different wavelengths.
-				</p>
-
-			</div>
-
-		</section>
-		<div class="section-divider"></div>
-		<!-- Thermal -->
-		<section class="page-section reverse">
-
-			<div class="page-image">
-				<img src="images/data_collection_images/thermal.png" alt="Thermal Survey">
-			</div>
-
-			<div class="page-text">
-
-				<h2>Thermal Survey</h2>
-
-				<p>
-					Thermal imagery was collected during the same flight to identify
-					canopy temperature variations related to water stress.
-				</p>
-
-			</div>
-
-		</section>
-		<div class="section-divider"></div>
-		<!-- Ground -->
-		<section class="page-section">
-
-			<div class="page-image">
-				<img src="images/data_collection_images/gcp.png" alt="Ground Measurements">
-			</div>
-
-			<div class="page-text">
-
-				<h2>Ground Measurements</h2>
-
-				<p>
-					Field observations and reference measurements were collected
-					to validate remotely sensed information and support the
-					interpretation of crop stress.
-				</p>
-
-			</div>
-
-		</section>
-		<div class="section-divider"></div>
+		
 		<!-- Dataset -->
 		<section class="page-section reverse">
 
