@@ -133,7 +133,7 @@
 		<div class="section-divider"></div>
 
 		<!-- VEGETATION INDICES -->
-		
+
 		<section class="indices-section">
 
 			<div class="page-text">
@@ -313,27 +313,48 @@
 
 		<div class="section-divider"></div>
 
-		
-		<!-- Dataset -->
-		<section class="page-section reverse">
 
+		<!-- STRESS ASSESSMENT -->
+		<section class="stress-section">
+
+			<div class="page-text">
+
+				<h2>STRESS ASSESSMENT</h2>
+
+				<p>
+					Crop stress is derived from the statistical distribution of vegetation
+					indices and canopy temperature for each individual survey.
+					Percentile-based thresholds automatically adapt to temporal variability,
+					ensuring a robust classification that remains comparable across
+					different acquisition dates and environmental conditions.
+				</p>
+
+			</div>
+		</section>
+		<section class="page-section">
 			<div class="page-image">
-				<img src="images/data_collection_images/workflow.png" alt="Dataset">
+				<img src="images/field_indices_images/stress_assessment_workflow.png" alt="Study Area">
 			</div>
 
 			<div class="page-text">
 
-				<h2>Collected Dataset</h2>
-
 				<p>
-					The final dataset includes RGB, multispectral and thermal
-					imagery together with field observations that are processed
-					during the analysis phase.
+					Each vegetation index and canopy temperature layer is first analysed
+					independently. Rather than using fixed thresholds, MyCrop classifies
+					each variable according to its percentile distribution, allowing the
+					method to automatically adapt to the conditions of every survey.
+
+					For vegetation indices, lower percentile values generally indicate
+					reduced vegetation vigor and therefore higher stress. In contrast,
+					higher canopy temperatures are associated with water deficit and
+					thermal stress. The classified variables are then combined to obtain
+					a single Stress Score for every grid cell.
 				</p>
 
 			</div>
 
 		</section>
+
 		<div class="section-divider"></div>
 	</main>
 

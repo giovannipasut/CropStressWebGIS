@@ -456,3 +456,37 @@ body {
 
     line-height:1.9;
 }
+
+.stress-layout{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:60px;
+
+    margin-top:45px;
+}
+
+.stress-info{
+
+    flex:1;
+}
+
+.stress-figure{
+
+    flex:1.4;
+}
+
+.stress-figure img{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+    border-radius:8px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
