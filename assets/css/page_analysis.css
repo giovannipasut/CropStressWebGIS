@@ -14,19 +14,17 @@ body {
     margin: 0 auto;
 }
 
-.section-divider{
+.section-divider {
     width: 75%;
     max-width: 1100px;
     height: 1px;
     margin: 70px auto;
 
-    background: linear-gradient(
-        to right,
-        transparent,
-        #dcdcdc 15%,
-        #dcdcdc 85%,
-        transparent
-    );
+    background: linear-gradient(to right,
+            transparent,
+            #dcdcdc 15%,
+            #dcdcdc 85%,
+            transparent);
 }
 
 /* =====================================================
@@ -78,8 +76,8 @@ body {
 
     max-width: 900px;
 
-    margin: 0 auto; 
-    
+    margin: 0 auto;
+
     font-size: 1.25rem;
 
     letter-spacing: .08em;
@@ -93,7 +91,7 @@ body {
 ===================================================== */
 
 .page-section {
-
+    
     display: flex;
 
     align-items: center;

@@ -91,6 +91,7 @@ body {
 ===================================================== */
 
 .page-section {
+    max-width: 950px;
 
     display: flex;
 
@@ -106,6 +107,7 @@ body {
 .page-section.reverse {
 
     flex-direction: row-reverse;
+    max-width: 950px;
 }
 
 
@@ -139,6 +141,8 @@ body {
 .page-text {
 
     flex: 1;
+    max-width: 950px;
+    
 }
 
 .page-text h2 {
@@ -257,13 +261,11 @@ body {
    REMOTE SENSING PLATFORMS
 ===================================================== */
 
-.platform-section {
+.platform-section{
 
-    display: flex;
+    max-width:950px;
 
-    justify-content: space-between;
-
-    gap: 70px;
+    margin:90px auto;
 }
 
 .platform-images {
@@ -311,7 +313,7 @@ body {
 .platform-table {
 
     margin: 4rem auto;
-
+    max-width: 950px;
     width: 100%;
 }
 
@@ -332,7 +334,7 @@ body {
 
     padding: 15px;
 
-    text-align:left;
+    text-align: left;
 
     text-transform: uppercase;
 
@@ -371,122 +373,178 @@ body {
    VEGETATION INDICES
 ===================================================== */
 
-.indices-section{
+.indices-section {
 
-    margin:80px 0;
+    margin: 80px 0;
 }
 
-.indices-table{
+.indices-table {
 
-    width:100%;
-
-    margin:4rem auto;
+    width: 100%;
+    max-width: 950px;
+    margin: 4rem auto;
 }
 
-.indices-table table{
+.indices-table table {
 
-    width:100%;
+    width: 100%;
 
-    border-collapse:collapse;
+    border-collapse: collapse;
 }
 
-.indices-table th{
+.indices-table th {
 
-    background:#4eb980;
+    background: #4eb980;
 
-    color:#fff;
+    color: #fff;
 
-    text-align:left;
+    text-align: left;
 
-    padding:16px 20px;
+    padding: 16px 20px;
 
-    text-transform:uppercase;
+    text-transform: uppercase;
 
-    letter-spacing:.08em;
+    letter-spacing: .08em;
 }
 
-.indices-table td{
+.indices-table td {
 
-    padding:18px 20px;
+    padding: 18px 20px;
 
-    border-bottom:1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
 
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
-.indices-table tbody tr:nth-child(even){
+.indices-table tbody tr:nth-child(even) {
 
-    background:#fafafa;
+    background: #fafafa;
 }
 
-.indices-table strong{
+.indices-table strong {
 
-    display:block;
+    display: block;
 
-    font-size:1.05rem;
+    font-size: 1.05rem;
 
-    color:#333;
+    color: #333;
 
-    margin-bottom:4px;
+    margin-bottom: 4px;
 }
 
-.indices-table span{
+.indices-table span {
 
-    display:block;
+    display: block;
 
-    font-size:.86rem;
+    font-size: .86rem;
 
-    color:#888;
+    color: #888;
 
-    line-height:1.4;
+    line-height: 1.4;
 }
 
-.indices-description{
+.indices-description {
 
-    max-width:900px;
+    max-width: 900px;
 
-    margin:4rem auto 0;
+    margin: 4rem auto 0;
 
-    text-align:center;
+    text-align: center;
 }
 
-.indices-description p{
+.indices-description p {
 
-    font-size:1.1rem;
+    font-size: 1.1rem;
 
-    line-height:1.9;
+    line-height: 1.9;
 }
 
-.stress-layout{
+/* =====================================================
+   STRESS ASSESSMENT 
+===================================================== */
+.stress-layout {
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    gap:60px;
+    gap: 60px;
 
-    margin-top:45px;
+    margin-top: 45px;
 }
 
-.stress-info{
+.stress-info {
 
-    flex:1;
+    flex: 1;
 }
 
-.stress-figure{
+.stress-figure {
 
-    flex:1.4;
+    flex: 1.4;
 }
 
-.stress-figure img{
+.stress-figure img {
 
-    width:100%;
+    width: 100%;
 
-    height:auto;
+    height: auto;
 
-    display:block;
+    display: block;
 
-    border-radius:8px;
+    border-radius: 8px;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
 }
+
+/* =====================================================
+   FROM INDICES TO STRESS MAPS 
+===================================================== */
+
+.summary-section {
+
+    margin: 90px 0;
+
+    text-align: left;
+}
+
+.summary-section .page-text {
+
+    max-width: 950px;
+
+    margin: 0 auto;
+}
+
+.summary-section h2 {
+
+    margin-bottom: 25px;
+}
+
+.summary-image {
+
+    margin: 45px auto;
+
+    max-width: 950px;
+}
+
+.summary-image img {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto;
+
+    border-radius: 8px;
+
+    
+}
+
+.summary-section .page-text:last-child {
+
+    margin-top: 45px;
+}
+
