@@ -9,39 +9,76 @@ const months = [
 
 let currentYear = 2025;
 let currentMonth = 3;
+let surveyData = [];
 
-function drawCalendar(){
+// function to draw the calendar for the current month and year
+
+function drawCalendar() {
 
     document.getElementById("monthTitle").innerHTML =
-        months[currentMonth-3] + " " + currentYear;
+        months[currentMonth - 3] + " " + currentYear;
 
-    const calendar=document.getElementById("calendar");
+    const calendar = document.getElementById("calendar");
 
-    calendar.innerHTML="";
+    calendar.innerHTML = "";
 
-    const firstDay=new Date(currentYear,currentMonth-1,1);
+    const firstDay = new Date(currentYear, currentMonth - 1, 1);
 
-    let start=(firstDay.getDay()+6)%7;
+    const start = (firstDay.getDay() + 6) % 7;
 
-    const days=new Date(currentYear,currentMonth,0).getDate();
+    const days = new Date(currentYear, currentMonth, 0).getDate();
 
-    for(let i=0;i<start;i++){
+    // caselle vuote iniziali
 
-        const empty=document.createElement("div");
+    for (let i = 0; i < start; i++) {
 
-        empty.className="empty";
+        const empty = document.createElement("div");
+
+        empty.className = "empty";
 
         calendar.appendChild(empty);
 
     }
 
-    for(let d=1;d<=days;d++){
+    // giorni del mese
 
-        const day=document.createElement("div");
+    for (let d = 1; d <= days; d++) {
 
-        day.className="day";
+        const day = document.createElement("div");
 
-        day.innerHTML=d;
+        day.className = "day";
+
+        const monthString = String(currentMonth).padStart(2, "0");
+
+        const dayString = String(d).padStart(2, "0");
+
+        const fullDate = `${currentYear}-${monthString}-${dayString}`;
+
+        const survey = surveyData.find(s => s.date === fullDate);
+
+        if (survey) {
+
+            if (survey.uav === 1 && survey.sentinel === 1) {
+
+                day.classList.add("both");
+
+            }
+
+            else if (survey.uav === 1) {
+
+                day.classList.add("uav");
+
+            }
+
+            else if (survey.sentinel === 1) {
+
+                day.classList.add("sentinel");
+
+            }
+
+        }
+
+        day.innerHTML = d;
 
         calendar.appendChild(day);
 
@@ -49,15 +86,56 @@ function drawCalendar(){
 
 }
 
-drawCalendar();
+// function to load survey data from CSV file
+async function loadSurvey() {
 
-document.getElementById("prevMonth").onclick=()=>{
+    const response = await fetch("data/survey.csv");
+
+    const text = await response.text();
+
+    const rows = text.trim().split("\n");
+
+    const headers = rows[0].split(",");
+
+    surveyData = rows.slice(1).map(row => {
+
+        const values = row.split(",");
+
+        return {
+
+            year: Number(values[0]),
+
+            date: values[1],
+
+            uav: Number(values[2]),
+
+            sentinel: Number(values[3])
+
+        };
+
+    });
+
+}
+
+// initialize the calendar and load survey data
+async function initialize() {
+
+    await loadSurvey();
+
+    drawCalendar();
+
+}
+
+initialize();;
+
+// event listeners for month navigation and year selection
+document.getElementById("prevMonth").onclick = () => {
 
     currentMonth--;
 
-    if(currentMonth<3){
+    if (currentMonth < 3) {
 
-        currentMonth=8;
+        currentMonth = 8;
 
     }
 
@@ -65,13 +143,13 @@ document.getElementById("prevMonth").onclick=()=>{
 
 }
 
-document.getElementById("nextMonth").onclick=()=>{
+document.getElementById("nextMonth").onclick = () => {
 
     currentMonth++;
 
-    if(currentMonth>8){
+    if (currentMonth > 8) {
 
-        currentMonth=3;
+        currentMonth = 3;
 
     }
 
@@ -79,15 +157,15 @@ document.getElementById("nextMonth").onclick=()=>{
 
 }
 
-document.querySelectorAll(".year-btn").forEach(btn=>{
+document.querySelectorAll(".year-btn").forEach(btn => {
 
-    btn.onclick=()=>{
+    btn.onclick = () => {
 
-        document.querySelectorAll(".year-btn").forEach(b=>b.classList.remove("active"));
+        document.querySelectorAll(".year-btn").forEach(b => b.classList.remove("active"));
 
         btn.classList.add("active");
 
-        currentYear=parseInt(btn.dataset.year);
+        currentYear = parseInt(btn.dataset.year);
 
         drawCalendar();
 

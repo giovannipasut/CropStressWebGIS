@@ -242,6 +242,34 @@ CALENDAR
 
 }
 
+.day.sentinel{
+
+    background:#d43d3d;
+
+    color:white;
+
+}
+
+.day.uav{
+
+    background:#3478f6;
+
+    color:white;
+
+}
+
+.day.both{
+
+    background:linear-gradient(
+        135deg,
+        #3478f6 50%,
+        #d43d3d 50%
+    );
+
+    color:white;
+
+}
+
 .calendar-legend{
 
     margin-top:15px;
