@@ -1,27 +1,103 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
 
-<title>MyCrop Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="assets/css/map.css">
-
-<link
-rel="stylesheet"
-href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <title>MyCrop | WebGIS</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="assets/css/map.css">
 
 </head>
 
 <body>
 
-<div id="map"></div>
+    <div class="dashboard">
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="assets/js/map.js"></script>
+
+        <!-- MAP -->
+        <section class="map-container">
+
+            <div id="leaflet-map">
+
+                MAP PLACEHOLDER
+
+            </div>
+
+            <!-- Floating calendar -->
+            <div id="calendar-panel">
+
+                <div class="calendar-years">
+
+                    <button class="year-btn active" data-year="2025">2025</button>
+
+                    <button class="year-btn" data-year="2026">2026</button>
+
+                </div>
+
+                <div class="calendar-header">
+
+                    <button id="prevMonth">&#10094;</button>
+
+                    <h3 id="monthTitle"></h3>
+
+                    <button id="nextMonth">&#10095;</button>
+
+                </div>
+
+                <div class="weekdays">
+
+                    <span>Mo</span>
+                    <span>Tu</span>
+                    <span>We</span>
+                    <span>Th</span>
+                    <span>Fr</span>
+                    <span>Sa</span>
+                    <span>Su</span>
+
+                </div>
+
+                <div id="calendar"></div>
+
+                <div class="calendar-legend">
+
+                    <div><span class="legend sentinel"></span> Sentinel</div>
+
+                    <div><span class="legend uav"></span> UAV</div>
+
+                    <div><span class="legend both"></span> Both</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- BOTTOM -->
+        <section class="bottom-panel">
+
+            <div class="chart-box">
+
+                Sentinel Graph
+
+            </div>
+
+            <div class="chart-box">
+
+                UAV Graph
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="assets/js/map.js"></script>
+    <script src="assets/js/calendar.js"></script>
 
 </body>
 

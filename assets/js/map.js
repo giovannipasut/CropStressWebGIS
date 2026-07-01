@@ -1,37 +1,45 @@
-// Coordinate del campo
+// ==========================================
+// MYCROP WEBGIS
+// ==========================================
+
+// Coordinate del campo sperimentale
 
 const field = [52.238111, 6.865472];
 
-// Crea la mappa
+// Creazione mappa
 
-const map = L.map('map', {
+const map = L.map('leaflet-map', {
 
-    zoomControl:true
+    zoomControl: true
 
-}).setView(field,18);
+}).setView(field, 18);
 
-
-// OpenStreetMap
+// Basemap OpenStreetMap
 
 L.tileLayer(
 
-'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 
-{
+    {
 
-    maxZoom:22,
+        maxZoom: 22,
 
-    attribution:'© OpenStreetMap'
+        attribution: '© OpenStreetMap'
 
-}).addTo(map);
+    }
 
+).addTo(map);
 
 // Marker del campo
 
 L.marker(field)
 
-.addTo(map)
+    .addTo(map)
 
-.bindPopup("<b>Experimental Wheat Field</b><br>MyCrop Study Area")
+    .bindPopup(
 
-.openPopup();
+        "<b>Experimental Wheat Field</b><br>MyCrop Study Area"
+
+    )
+
+    .openPopup();
